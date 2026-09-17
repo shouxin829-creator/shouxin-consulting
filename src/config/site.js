@@ -1,7 +1,7 @@
 export const site = {
   brand: "守信顧問",
   brandEn: "SHOU XIN CONSULTING",
-  email: "chengyi5828@gmail.com",
+  email: "shouxin829@gmail.com",
   lineId: "@287sxlww",
   lineUrl: "https://line.me/R/ti/p/@287sxlww",
 };

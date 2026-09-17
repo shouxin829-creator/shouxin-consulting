@@ -48,7 +48,7 @@ public/images/首頁形象圖1.png
 src/config/site.js
 
 目前：
-Email：chengyi5828@gmail.com
+Email：shouxin829@gmail.com
 LINE：@287sxlww
 
 修改一次，Top Bar 與漢堡選單會同步更新。

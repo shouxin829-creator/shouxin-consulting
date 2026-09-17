@@ -56,7 +56,7 @@ ${data.get("message") || ""}`
     );
 
     window.location.href =
-      `mailto:chengyi5828@gmail.com?subject=${subject}&body=${body}`;
+      `mailto:shouxin829@gmail.com?subject=${subject}&body=${body}`;
   }
 
   return (
