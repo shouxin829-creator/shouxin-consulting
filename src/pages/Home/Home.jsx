@@ -1,3 +1,7 @@
+import { useState } from "react";
+
+const WEB3FORMS_ACCESS_KEY = "bce13169-625a-47b0-8144-535b5575bcc2";
+
 const services = [
   {
     number: "01",
@@ -37,26 +41,35 @@ const steps = [
 ];
 
 export default function Home() {
-  function handleSubmit(event) {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
+  const [status, setStatus] = useState("idle");
 
-    const subject = encodeURIComponent(
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    data.append("access_key", WEB3FORMS_ACCESS_KEY);
+    data.append(
+      "subject",
       `守信顧問｜初步諮詢需求｜${data.get("name") || ""}`
     );
 
-    const body = encodeURIComponent(
-`姓名：${data.get("name") || ""}
-聯絡電話：${data.get("phone") || ""}
-Email：${data.get("email") || ""}
-想諮詢的問題：${data.get("topic") || ""}
-
-補充說明：
-${data.get("message") || ""}`
-    );
-
-    window.location.href =
-      `mailto:shouxin829@gmail.com?subject=${subject}&body=${body}`;
+    setStatus("sending");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      const result = await response.json();
+      if (result.success) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -223,10 +236,22 @@ ${data.get("message") || ""}`
                 />
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-[#102D4D] px-6 py-4 font-black text-white"
+                  disabled={status === "sending"}
+                  className="w-full rounded-xl bg-[#102D4D] px-6 py-4 font-black text-white disabled:opacity-60"
                 >
-                  送出諮詢需求 →
+                  {status === "sending" ? "傳送中…" : "送出諮詢需求 →"}
                 </button>
+
+                {status === "success" && (
+                  <p className="text-center font-bold text-emerald-600">
+                    已收到您的需求，我們會盡快與您聯繫！
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-center font-bold text-red-600">
+                    送出失敗，請稍後再試，或直接來信 shouxin829@gmail.com
+                  </p>
+                )}
               </form>
             </div>
           </div>
