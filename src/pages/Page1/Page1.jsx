@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usePageMeta } from "../../hooks/usePageMeta";
 import {
   ArrowRight,
   Building2,
@@ -20,6 +21,12 @@ import {
 
 export default function Page1() {
   const [openFaq, setOpenFaq] = useState(0);
+
+  usePageMeta({
+    title: "資產與退休規劃｜資產管理・退休理財｜守信顧問",
+    description:
+      "資產與退休規劃：盤點不動產、現金、保單、投資與企業資產，規劃退休金流與生活保障，讓您提前準備、安心退休。守信顧問，台中資產顧問團隊。",
+  });
 
   const assetItems = [
     {

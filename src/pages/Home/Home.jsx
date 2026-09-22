@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usePageMeta } from "../../hooks/usePageMeta";
 
 const WEB3FORMS_ACCESS_KEY = "bce13169-625a-47b0-8144-535b5575bcc2";
 
@@ -43,6 +44,12 @@ const steps = [
 export default function Home() {
   const [status, setStatus] = useState("idle");
 
+  usePageMeta({
+    title: "守信顧問｜資產傳承規劃・遺產信託・婚姻財產權益｜台中",
+    description:
+      "守信顧問提供資產傳承規劃、遺產規劃、信託規劃、退休理財規劃與婚姻財產權益諮詢，位於台中西屯，協助您把複雜的財務與傳承問題一次說清楚。",
+  });
+
   async function handleSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -75,6 +82,9 @@ export default function Home() {
   return (
     <>
       <section id="top" className="relative overflow-hidden">
+        <h1 className="sr-only">
+          守信顧問｜資產傳承規劃・遺產規劃・信託規劃・退休理財規劃・婚姻財產權益諮詢
+        </h1>
         <div className="mx-auto max-w-[1500px] px-4 py-7 sm:px-6 lg:px-8 lg:py-10">
           <div className="overflow-hidden rounded-[24px] border border-[#102D4D]/10 bg-white shadow-[0_30px_80px_rgba(20,43,70,0.14)]">
             <div className="relative">

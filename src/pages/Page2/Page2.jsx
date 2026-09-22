@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usePageMeta } from "../../hooks/usePageMeta";
 import {
   ArrowRight,
   Building2,
@@ -19,6 +20,12 @@ import {
 
 export default function Page2() {
   const [openFaq, setOpenFaq] = useState(0);
+
+  usePageMeta({
+    title: "資產傳承規劃・遺產規劃・信託規劃｜守信顧問",
+    description:
+      "資產傳承規劃、遺產規劃、信託規劃：整合遺產、贈與、信託、保險與遺囑，協助家庭把重要的傳承安排提前規劃清楚。守信顧問，台中資產傳承顧問團隊。",
+  });
 
   const concerns = [
     {

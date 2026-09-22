@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usePageMeta } from "../../hooks/usePageMeta";
 import {
   ArrowRight,
   Banknote,
@@ -19,6 +20,12 @@ import {
 
 export default function Page3() {
   const [openFaq, setOpenFaq] = useState(0);
+
+  usePageMeta({
+    title: "婚姻財產權益・婚姻財產分配・繼承糾紛諮詢｜守信顧問",
+    description:
+      "婚姻財產權益、婚姻財產分配、繼承糾紛諮詢：針對婚前婚後資產、繼承分配與家庭財務安排，協助釐清權益與可執行方向。守信顧問，台中家庭財務顧問團隊。",
+  });
 
   const concerns = [
     {
