@@ -8,29 +8,25 @@ const services = [
     number: "01",
     title: "資產管理",
     desc: "盤點不動產、現金、保單、投資與企業資產，建立清楚完整的家庭資產架構。",
-    image:
-      "https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "/images/service-01-asset.webp",
   },
   {
     number: "02",
     title: "退休規劃",
     desc: "從退休生活支出、退休金流與風險保障出發，提前安排退休後的財務生活。",
-    image:
-      "https://images.pexels.com/photos/8441774/pexels-photo-8441774.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "/images/service-02-retirement.webp",
   },
   {
     number: "03",
     title: "傳承規劃",
     desc: "整合遺產、贈與、信託、保險與遺囑，協助家庭把重要的事情提前安排清楚。",
-    image:
-      "https://images.pexels.com/photos/8441866/pexels-photo-8441866.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "/images/service-03-legacy.webp",
   },
   {
     number: "04",
     title: "婚姻與家庭財務權益",
     desc: "針對婚姻財產、繼承分配與家庭財務安排，協助釐清權益與可執行方向。",
-    image:
-      "https://images.pexels.com/photos/7876295/pexels-photo-7876295.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "/images/service-04-family.webp",
   },
 ];
 
