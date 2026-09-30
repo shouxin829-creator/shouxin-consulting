@@ -272,7 +272,7 @@ export default function Page3() {
             <div className="overflow-hidden rounded-[34px] border border-white bg-white p-2 shadow-[0_30px_80px_rgba(16,45,77,0.16)]">
               <div className="relative h-[520px] overflow-hidden rounded-[28px]">
                 <img
-                  src="https://images.pexels.com/photos/7876295/pexels-photo-7876295.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  src="/images/service-04-family.webp"
                   alt="夫妻與專業人士討論家庭財務權益情境示意"
                   className="h-full w-full object-cover"
                 />

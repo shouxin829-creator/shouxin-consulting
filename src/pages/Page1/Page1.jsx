@@ -231,7 +231,7 @@ export default function Page1() {
             <div className="overflow-hidden rounded-[34px] border border-white bg-white p-2 shadow-[0_30px_80px_rgba(16,45,77,0.16)]">
               <div className="relative h-[520px] overflow-hidden rounded-[28px]">
                 <img
-                  src="https://images.pexels.com/photos/8441774/pexels-photo-8441774.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  src="/images/service-02-retirement.webp"
                   alt="退休夫妻與專業顧問討論規劃情境示意"
                   className="h-full w-full object-cover"
                 />

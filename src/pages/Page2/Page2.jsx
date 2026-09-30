@@ -265,7 +265,7 @@ export default function Page2() {
             <div className="overflow-hidden rounded-[34px] border border-white bg-white p-2 shadow-[0_30px_80px_rgba(16,45,77,0.16)]">
               <div className="relative h-[520px] overflow-hidden rounded-[28px]">
                 <img
-                  src="https://images.pexels.com/photos/8441866/pexels-photo-8441866.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                  src="/images/service-03-legacy.webp"
                   alt="家庭進行傳承與文件規劃的情境示意"
                   className="h-full w-full object-cover"
                 />
